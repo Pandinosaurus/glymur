@@ -1,13 +1,17 @@
 """
 Test fixtures common to more than one test point.
 """
+# Standard library imports
 import pathlib
 import shutil
 import tempfile
 import unittest
 
+# 3rd party library imports
 import numpy as np
+import pyproj
 
+# Local imports
 import glymur
 
 # Require at least a certain version of openjpeg for running most tests.
@@ -127,7 +131,13 @@ DEFAULT_PROGRESSION_ORDER_CHANGES_TYPE = load_test_data(id)
 
 FILE1_XML = load_test_data('file1_xml')
 FILE1_XML_BOX = load_test_data('file1_xml_box')
-GEOTIFF_UUID = load_test_data('geotiff_uuid')
+
+
+if pyproj.proj_version_str[0] >= '6':
+    GEOTIFF_UUID = load_test_data('geotiff_uuid_proj6')
+else:
+    GEOTIFF_UUID = load_test_data('geotiff_uuid')
+
 GOODSTUFF_CODESTREAM_HEADER = load_test_data('goodstuff_codestream_header')
 GOODSTUFF_WITH_FULL_HEADER = load_test_data('goodstuff_with_full_header')
 ISSUE186_PROGRESSION_ORDER = load_test_data('issue186_progression_order')
