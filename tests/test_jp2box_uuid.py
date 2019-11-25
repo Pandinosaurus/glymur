@@ -401,5 +401,4 @@ class TestSuiteHiRISE(fixtures.TestCommon):
         actual = str(jp2.box[4])
 
         expected = fixtures.GEOTIFF_UUID
-        breakpoint()
         self.assertEqual(actual, expected)
