@@ -9,7 +9,6 @@ import unittest
 
 # 3rd party library imports
 import numpy as np
-import pyproj
 
 # Local imports
 import glymur
