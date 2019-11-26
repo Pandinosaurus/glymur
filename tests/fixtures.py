@@ -132,11 +132,7 @@ DEFAULT_PROGRESSION_ORDER_CHANGES_TYPE = load_test_data(id)
 FILE1_XML = load_test_data('file1_xml')
 FILE1_XML_BOX = load_test_data('file1_xml_box')
 
-
-if gdal.VersionInfo() > '2':
-    GEOTIFF_UUID = load_test_data('geotiff_uuid_proj6')
-else:
-    GEOTIFF_UUID = load_test_data('geotiff_uuid')
+GEOTIFF_UUID = load_test_data('geotiff_uuid_proj6')
 
 GOODSTUFF_CODESTREAM_HEADER = load_test_data('goodstuff_codestream_header')
 GOODSTUFF_WITH_FULL_HEADER = load_test_data('goodstuff_with_full_header')
