@@ -2,5 +2,4 @@ gdal
 importlib_resources
 lxml
 numpy
-pyproj
 scikit-image>=0.14.2
