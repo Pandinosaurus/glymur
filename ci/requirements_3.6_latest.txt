@@ -1,6 +1,6 @@
-gdal
+gdal<=3.0.0
 importlib_resources
 numpy
 lxml
 openjpeg
-scikit-image>=0.14.2
+scikit-image

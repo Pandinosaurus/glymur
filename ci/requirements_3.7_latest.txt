@@ -2,4 +2,4 @@ gdal
 numpy
 lxml
 openjpeg
-scikit-image>=0.14.2
+scikit-image

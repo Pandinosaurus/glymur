@@ -8,6 +8,7 @@ import tempfile
 import unittest
 
 # 3rd party library imports
+import gdal
 import numpy as np
 
 # Local imports
@@ -132,7 +133,10 @@ FILE1_XML = load_test_data('file1_xml')
 FILE1_XML_BOX = load_test_data('file1_xml_box')
 
 
-GEOTIFF_UUID = load_test_data('geotiff_uuid')
+if gdal.VersionInfo() > '2':
+    GEOTIFF_UUID = load_test_data('geotiff_uuid_proj6')
+else:
+    GEOTIFF_UUID = load_test_data('geotiff_uuid')
 
 GOODSTUFF_CODESTREAM_HEADER = load_test_data('goodstuff_codestream_header')
 GOODSTUFF_WITH_FULL_HEADER = load_test_data('goodstuff_with_full_header')
